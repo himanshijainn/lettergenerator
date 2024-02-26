@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Love Letter Generator helps you to quickly create a love letter for your loved one. You can choose your theme and personalize it with your own words. Have fun creating a love letter to treasure.">
+  <meta name="keywords"
+    content="letter generator, love letter generator, love, Valentine, anniversary, celebration, quickly write a love letter, funny love letter, romantic, platonic, monogamous, polyamoric">
+  <title>It's US</title>
+  <!--Favicon-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!--Styles-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+
+<body>
+  <!-- welcome section -->
+  <section id="welcome-section" class="welcome">
+    <h1 class="sr-only d-none">Welcome</h1>
+    <video class="video-container" muted autoplay loop>
+      <source src="./assets/images/heart-bg.mp4" type="video/mp4">
+    </video>
+    <button type="submit" id="welcome-btn" class="btn">Welcome</button>
+  </section>
+
+  <!--Main-->
+  <section id="main-section" class="main">
+    <header>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-md p-0">
+        <div class="container-fluid p-0">
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link active" aria-current="page" aria-label="Home" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="new-letter" aria-label="New Letter" href="#loveLetterForm">New Letter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-label="About" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Love Letter Generator-->
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center pb-3 pt-3 vh-100">
+      <div class="card p-2 p-md-5">
+        <h1>Love Letter Generator</h1>
+        <form id="loveLetterForm">
+          <fieldset id="type" class="input-container pt-3 d-flex flex-row justify-content-start">
+          <legend class="d-none">Letter Type</legend>
+            <label for="letter-type" class="type-label">Letter Type:</label>
+            <select name="letter-type" id="letter-type" class="p-1">
+              <option value="Platonic">Platonic</option>
+              <option value="Romantic">Romantic</option>
+              <option value="Monogamous">Monogamous</option>
+              <option value="Polyamorous">Polyamorous</option>
+            </select>
+          </fieldset>
+          <fieldset id="main-form" class="input-container pt-3">
+          <legend class="d-none">User Input</legend>
+            <div >
+              <label class="d-none" for="partnerName">Partner's Name:</label>
+              <input class="w-100" type="text" name="partnerName" id="partnerName" pattern="^[a-zA-Z\s]+$"
+                title="Please enter letters only" placeholder="Partner's Name" required>
+            </div>
+            <div class="d-flex flow-row">
+              <label class="d-none" for="noun1">Noun 1:</label>
+              <input class="flex-shrink-1 me-1" type="text" name="noun1" id="noun1" pattern="^[a-zA-Z\s]+$" title="Please enter letters only"
+                placeholder="Noun 1" required>
+              <button class="m-0" type="button" id="randomizeNoun1"><i class="fa fa-dice"></i></button>
+            </div>
+            <div class="d-flex flow-row">
+              <label class="d-none" for="noun2">Noun 2:</label>
+              <input class="flex-shrink-1 me-1" type="text" name="noun2" id="noun2" pattern="^[a-zA-Z\s]+$" title="Please enter letters only"
+                placeholder="Noun 2" required>
+              <button class="m-0" type="button" id="randomizeNoun2"><i class="fa fa-dice"></i></button>
+            </div>
+            <div>
+              <label class="d-none" for="eyeColor">Eye Colour:</label>
+              <input  class="w-100" type="text" name="eyeColor" id="eyeColor" pattern="^[a-zA-Z\s]+$" title="Please enter letters only"
+                placeholder="Eye Colour" required>
+            </div>
+            <div class="d-flex flow-row">
+              <label class="d-none" for="adjective1">Adjective 1:</label>
+              <input class="flex-shrink-1 me-1" type="text" name="adjective1" id="adjective1" pattern="^[a-zA-Z\s]+$"
+                title="Please enter letters only" placeholder="Adjective 1" required>
+              <button class="m-0" type="button" id="randomizeAdjective1"><i class="fa fa-dice"></i></button>
+            </div>
+            <div class="d-flex flow-row">
+              <label class="d-none" for="adjective2">Adjective 2:</label>
+              <input class="flex-shrink-1 me-1" type="text" name="adjective2" id="adjective2" pattern="^[a-zA-Z\s]+$"
+                title="Please enter letters only" placeholder="Adjective 2" required>
+              <button class="m-0" type="button" id="randomizeAdjective2"><i class="fa fa-dice"></i></button>
+            </div>
+            <div>
+              <label class="d-none" for="yourName">Your Name:</label>
+              <input  class="w-100"  type="text" name="yourName" id="yourName" pattern="^[a-zA-Z\s]+$" title="Please enter letters only"
+              placeholder="Your Name" required>
+              <br>
+
+              <div class="row d-flex flow-row justify-content-center">
+              <input class="btn mt-3 mx-1" id="generate-btn" type="submit" value="Generate">
+              <input class="btn mt-3 mx-1" id="clear-btn" type="submit" value="Clear">
+            </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <!-- Letter Section -->
+    <section id="letter-section">
+      <div class="card p-5">
+        <div class="mb-3 text-center">
+          <button type="submit" class="platonic letter-type-button mb-2" id="Platonic">Platonic</button>
+          <button type="submit" class="romantic letter-type-button mb-2" id="Romantic">Romantic</button>
+          <button type="submit" class="monogamous letter-type-button mb-2" id="Monogamous">Monogamous</button>
+          <button type="submit" class="polyamorous letter-type-button mb-2" id="Polyamorous">Polyamorous</button>
+        </div>
+        <h2>Your Letter...</h2>
+        <div id="letterOutput" class="rounded p-1">
+        </div>
+        <div class="d-flex text-center">
+        <button id="download" class="btn mt-1 px-1" type="submit">Download</button>
+        <button id="back" class="btn mt-1 mx-1">Back</button>
+        </div>
+      </div>
+      <img alt="pdf background" id="pdfBg" class="d-none" src="assets/images/pdf_bg.jpg">
+    </section>
+
+    <!--footer -->
+    <footer class="footer d-none d-sm-flex">
+      <ul class="nav justify-content-end ">
+        <li class="nav-item ">
+          <a href="https://github.com/himanshijainn" target="_blank"><i class="fa-brands fa-github"></i> </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.behance.net/himanshiiijain" target="_blank"><i class="fa-brands fa-behance"></i> </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://twitter.com/__himanshiiii?t=2ztAjBGuWE93NcaeckPOAg&s=08" target="_blank"><i class="fa-brands fa-twitter"></i> </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.facebook.com/amaya.sharma.7982" target="_blank"><i class="fa-brands fa-facebook"></i> </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.instagram.com/himanshiii.jain/?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank"><i class="fa-brands fa-instagram"></i> </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.linkedin.com/in/himanshi-jain-a589691b5" target="_blank"><i class="fa-brands fa-linkedin"></i> </a>
+        </li>
+      </ul>
+    </footer>
+  </section>
+
+  <!--Scripts-->
+  <script src="assets/scripts/script.js"></script>
+
+  <!-- Font Awesome Script -->
+  <script src="https://kit.fontawesome.com/668de150a5.js" crossorigin="anonymous"></script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- PDF JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+    integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+
+
+  <script src="assets/scripts/generator/letter.js"></script>
+
+</body>
+
+</html>
